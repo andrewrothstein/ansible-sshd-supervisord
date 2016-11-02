@@ -1,10 +1,8 @@
 ---
-- name: install sshd program def
+- name: create /var/run/sshd
   become: yes
   become_user: root
-  with_items:
-    - etc/supervisor/conf.d/sshd.conf
-  template: >-
-    src={{item}}.j2
-    dest=/{{item}}
-    mode=0644
+  file: >-
+    path=/var/run/sshd
+    state=directory
+    mode=0755

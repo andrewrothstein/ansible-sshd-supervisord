@@ -1,22 +1,22 @@
 andrewrothstein.sshd-supervisord
 =========
 
-Installs a program specification for sshd
+Installs a supervisord program specification for sshd
 
 Requirements
 ------------
 
-See [meta/main.yml]
+See (meta/main.yml)[meta/main.yml]
 
 Role Variables
 --------------
 
-See [defaults/main.yml]
+See (defaults/main.yml)[defaults/main.yml]
 
 Dependencies
 ------------
 
-See [meta/main.yml]
+See (meta/main.yml)[meta/main.yml]
 
 Example Playbook
 ----------------
@@ -25,7 +25,8 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - andrewrothstein.sshd-supervisord
+	    - andrewrothstein.supervisord
+        - andrewrothstein.sshd-supervisord
 
 License
 -------

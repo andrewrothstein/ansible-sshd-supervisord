@@ -12,16 +12,16 @@ galaxy_info:
         - 7
     - name: Fedora
       versions:
-        - 23
+        - 24
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
   galaxy_tags:
-    - development
+    - sshd
+    - supervisord
 
 dependencies:
-  - role: andrewrothstein.supervisord
-    version: v1.0.5
   - role: andrewrothstein.sshd
     version: v1.0.1
+  - role: andrewrothstein.supervisord-program
+    version: v1.0.0

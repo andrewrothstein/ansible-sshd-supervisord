@@ -1,2 +1,4 @@
 ---
 # defaults file for sshd-supervisord
+supervisord_program_name: sshd
+supervisord_program_command: /usr/sbin/sshd -D
