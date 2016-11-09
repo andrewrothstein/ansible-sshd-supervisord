@@ -6,3 +6,13 @@
     path=/var/run/sshd
     state=directory
     mode=0755
+
+- name: install boot drop-in for initializing the sshd keys
+  become: yes
+  become_user: root
+  with_items:
+    - sshd-keycheck.sh
+  template: >-
+    src={{item}}.j2
+    dest=/etc/supervisor/profile.d/{{item}}
+    mode=0755

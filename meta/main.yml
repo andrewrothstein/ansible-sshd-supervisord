@@ -9,19 +9,19 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 7
+        - all
     - name: Fedora
       versions:
-        - 24
+        - all
     - name: Ubuntu
       versions:
-        - xenial
+        - all
   galaxy_tags:
     - sshd
     - supervisord
 
 dependencies:
   - role: andrewrothstein.sshd
-    version: v1.0.1
+    version: v1.0.2
   - role: andrewrothstein.supervisord-program
     version: v1.0.0
