@@ -24,4 +24,4 @@ dependencies:
   - role: andrewrothstein.sshd
     version: v1.0.2
   - role: andrewrothstein.supervisord-program
-    version: v1.0.0
+    version: v1.0.2
