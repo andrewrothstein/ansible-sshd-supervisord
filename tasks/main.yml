@@ -2,8 +2,11 @@
 - name: create /var/run/sshd
   become: yes
   become_user: root
+  with_items:
+    - /var/run/sshd
+    - /etc/supervisor/profile.d
   file: >-
-    path=/var/run/sshd
+    path={{item}}
     state=directory
     mode=0755
 
