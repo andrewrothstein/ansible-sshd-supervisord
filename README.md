@@ -1,7 +1,7 @@
 andrewrothstein.sshd-supervisord
 =========
 
-Installs a supervisord program specification for sshd
+Installs a [supervisord](http://supervisord.org/) program specification for [sshd](https://en.wikipedia.org/wiki/Secure_Shell)
 
 Requirements
 ------------
@@ -23,10 +23,12 @@ Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-	    - andrewrothstein.supervisord
-        - andrewrothstein.sshd-supervisord
+```yml
+- hosts: servers
+  roles:
+    - andrewrothstein.supervisord
+    - andrewrothstein.sshd-supervisord
+```
 
 License
 -------
@@ -36,4 +38,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein andrew.rothstein@gmail.com
+Andrew Rothstein <andrew.rothstein@gmail.com>

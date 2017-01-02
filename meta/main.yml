@@ -22,6 +22,8 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.sshd
-    version: v1.0.3
+    version: v1.0.4
   - role: andrewrothstein.supervisord-program
-    version: v1.0.2
+    version: v1.0.3
+    supervisord_program_name: sshd
+    supervisord_program_command: /usr/sbin/sshd -D
