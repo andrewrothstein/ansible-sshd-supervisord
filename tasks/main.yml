@@ -5,17 +5,17 @@
   with_items:
     - /var/run/sshd
     - /etc/supervisor/profile.d
-  file: >-
-    path={{item}}
-    state=directory
-    mode=0755
+  file:
+    path: '{{item}}'
+    state: directory
+    mode: 0755
 
 - name: install boot drop-in for initializing the sshd keys
   become: yes
   become_user: root
   with_items:
     - sshd-keycheck.sh
-  template: >-
-    src={{item}}.j2
-    dest=/etc/supervisor/profile.d/{{item}}
-    mode=0755
+  template:
+    src: '{{item}}.j2'
+    dest: /etc/supervisor/profile.d/{{item}}
+    mode: 0755

@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-sshd-supervisord.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-sshd-supervisord)
 andrewrothstein.sshd-supervisord
 =========
 
