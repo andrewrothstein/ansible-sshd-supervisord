@@ -24,6 +24,6 @@ dependencies:
   - role: andrewrothstein.sshd
     version: v1.0.5
   - role: andrewrothstein.supervisord-program
-    version: v1.0.3
+    version: v1.0.4
     supervisord_program_name: sshd
     supervisord_program_command: /usr/sbin/sshd -D
