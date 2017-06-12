@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-sshd-supervisord.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-sshd-supervisord)
 andrewrothstein.sshd-supervisord
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-sshd-supervisord.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-sshd-supervisord)
 
 Installs a [supervisord](http://supervisord.org/) program specification for [sshd](https://en.wikipedia.org/wiki/Secure_Shell)
 
