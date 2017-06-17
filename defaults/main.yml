@@ -1,2 +1,3 @@
 ---
 # defaults file for sshd-supervisord
+sshd_supervisord_profile_d: /etc/supervisor/profile.d
