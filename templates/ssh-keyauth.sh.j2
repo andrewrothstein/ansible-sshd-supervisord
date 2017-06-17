@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+if [ -z ${SSH_AUTHORIZED_KEY+} ];
+then
+    mkdir -p $HOME/.ssh
+    echo authorizing key $SSH_AUTHORIZED_KEY...
+    echo "$SSH_AUTHORIZED_KEY" >> $HOME/.ssh/authorized_keys;
+fi

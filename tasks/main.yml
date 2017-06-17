@@ -4,7 +4,7 @@
   become_user: root
   with_items:
     - /var/run/sshd
-    - /etc/supervisor/profile.d
+    - '{{sshd_supervisord_profile_d}}'
   file:
     path: '{{item}}'
     state: directory
@@ -15,7 +15,8 @@
   become_user: root
   with_items:
     - sshd-keycheck.sh
+    - ssh-keyauth.sh
   template:
     src: '{{item}}.j2'
-    dest: /etc/supervisor/profile.d/{{item}}
+    dest: '{{sshd_supervisord_profile_d}}/{{item}}'
     mode: 0755
