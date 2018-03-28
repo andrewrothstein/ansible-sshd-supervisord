@@ -14,9 +14,9 @@
   become: yes
   become_user: root
   with_items:
-    - sshd-keycheck.sh
-    - ssh-keyauth.sh
+    - f: sshd-keycheck.sh
+    - f: ssh-keyauth.sh
   template:
-    src: '{{item}}.j2'
-    dest: '{{sshd_supervisord_profile_d}}/{{item}}'
-    mode: 0755
+    src: '{{item.f}}.j2'
+    dest: '{{item.d|default(sshd_supervisord_profile_d)}}/{{item.f}}'
+    mode: '{{item.m|default("0755")}}'
