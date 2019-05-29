@@ -1,29 +1,27 @@
----
+dependencies:
+- role: andrewrothstein.sshd
+  version: v1.0.8
+- role: andrewrothstein.supervisord-program
+  supervisord_program_command: /usr/sbin/sshd -D
+  supervisord_program_name: sshd
+  version: v1.1.3
 galaxy_info:
   author: Andrew Rothstein
-  description: installs supervisord conf for sshd
   company: BlackRock
+  description: installs supervisord conf for sshd
+  galaxy_tags:
+  - sshd
+  - supervisord
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-  galaxy_tags:
-    - sshd
-    - supervisord
-
-dependencies:
-  - src: andrewrothstein.sshd
-    version: v1.0.8
-  - src: andrewrothstein.supervisord-program
-    version: v1.1.2
-    supervisord_program_name: sshd
-    supervisord_program_command: /usr/sbin/sshd -D
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
